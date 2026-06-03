@@ -16,6 +16,8 @@ jobs:
           python-version: "3.7"
 
       - name: "RunScript"
+        env:
+          MY_TOKEN: ${{ secrets.MY_PRIVATE_TOKEN }}
         shell: bash -el {0}
         run: |
           chmod +x ./start.sh
