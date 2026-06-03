@@ -1,0 +1,30 @@
+name: "Run Workflow"
+on:
+  workflow_dispatch:
+
+jobs:
+  startRemove:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "CheckRepo"
+        uses: actions/checkout@v4
+
+      - name: "CondaEnv"
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          mamba-version: "*"
+          activate-environment: wftenv
+          python-version: "3.7"
+
+      - name: "RunScript"
+        shell: bash -el {0}
+        run: |
+          chmod +x ./start.sh
+          ./start.sh
+
+      - name: "Upload"
+        uses: actions/upload-artifact@v4
+        with:
+           name: uploaded
+           path: ./desencor_path
+           retention-days: 7
