@@ -3,7 +3,8 @@
 # Models
 mkdir ./unpack
 unzip "./unpack/09-11-2019.DCPv2.model.zip" -d ./unpack
-mv "./unpack/09-11-2019 DCPv2 model" ./models
+rm -rf ./models
+mv "./unpack/09-11-2019 DCPv2 model/" ./models
 
 # unpack Multisource
 unzip "./decensor_input/a.zip" -d ./decensor_input
