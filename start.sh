@@ -10,4 +10,5 @@ unzip "./decensor_input/a.zip" -d ./decensor_input
 
 # start
 pip install -r requirements-cpu.txt
-python start_decbar.py
+#python start_decbar.py
+python decensor.py
