@@ -26,5 +26,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
            name: uploaded
-           path: ./desencor_path
+           path: ./decensor_output
            retention-days: 7
