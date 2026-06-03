@@ -14,7 +14,16 @@ jobs:
         with:
           activate-environment: wftenv
           python-version: "3.7"
-
+          
+      - name: "ReleasesPatch"
+        uses: robinraju/release-downloader@v1.11
+        with:
+          repository: "Toad114514/DeepCreamPy"
+          fileName: "models.zip"
+          out-file-path: "./unpack"
+          extract: false
+          token: ${{ secrets.MY_PRIVATE_TOKEN }}
+      
       - name: "RunScript"
         env:
           MY_TOKEN: ${{ secrets.MY_PRIVATE_TOKEN }}
