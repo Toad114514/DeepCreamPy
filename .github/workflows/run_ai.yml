@@ -16,12 +16,13 @@ jobs:
           python-version: "3.7"
           
       - name: "ReleasesPatch"
-        uses: robinraju/release-downloader@latest
+        uses: robinraju/release-downloader@v1
         with:
           repository: "Toad114514/DeepCreamPy"
           fileName: "models.zip"
           out-file-path: "./unpack"
           extract: false
+          tag: "latest"
           token: ${{ secrets.MY_PRIVATE_TOKEN }}
       
       - name: "RunScript"
