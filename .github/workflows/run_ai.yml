@@ -12,7 +12,6 @@ jobs:
       - name: "CondaEnv"
         uses: conda-incubator/setup-miniconda@v3
         with:
-          mamba-version: "*"
           activate-environment: wftenv
           python-version: "3.7"
 
