@@ -1,4 +1,6 @@
 # DeepCreamPy
+using ci/cd to automatic deepcream
+
 *Plausibly Reconstruct Anime-style Artworks with Deep Neural Networks.*
 
 [![GitHub release](https://img.shields.io/github/release/Deepshift/DeepCreamPy.svg)](https://github.com/Deepshift/DeepCreamPy/releases/latest)
